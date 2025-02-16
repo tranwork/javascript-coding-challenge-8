@@ -31,12 +31,10 @@ calculateServiceFee(200, "Premium"); // Expected output: "Service Fee: $30.00"
 calculateServiceFee(500, "Standard"); // Expected output: "Service Fee: $50.00"
 
 // Task 4: Car Rental Cost Calculation
-function calculateRentalCost(days, carType, insurance = false) {
-    let rate = carType === "Economy" ? 40 :
-               carType === "Standard" ? 60 :
-               100;
-    let totalCost = (rate * days) + (insurance ? 20 * days : 0);
-    console.log(`Total Rental Cost: $${totalCost}`);
+function calculateShippingCost(weight, location, expedited = false) {
+    let cost = location === "USA" ? 5 + (weight * 0.5) : 10 + (weight * 0.7);
+    if (expedited) cost += 10;
+    console.log(`Shipping Cost: $${cost.toFixed(2)}`);
 }
 
 // Test Data
